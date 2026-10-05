@@ -3,7 +3,6 @@
 import pandas as pd
 
 
-
 def from_numpy(array):
     """
     Creates a pd.DataFrame from a np.ndarray.
