@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Fill missing values in a DataFrame and remove the Weighted_Price column."""
 
 
 def fill(df):

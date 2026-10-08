@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""Convert selected DataFrame columns to a NumPy array."""
 import numpy as np
 
 

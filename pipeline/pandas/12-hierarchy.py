@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-
+"""Concatenate Coinbase and Bitstamp data in chronological order."""
 import pandas as pd
+
 
 index = __import__('10-index').index
 

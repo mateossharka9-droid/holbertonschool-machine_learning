@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-
+"""Concatenate selected Bitstamp data with Coinbase data."""
 import pandas as pd
+
 
 index = __import__('10-index').index
 

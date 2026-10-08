@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""Load a DataFrame from a file."""
 import pandas as pd
 
 

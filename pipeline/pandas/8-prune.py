@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""Remove rows with null values."""
 
 
 def prune(df):
