@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-""""Module that plots all the previous graphs in one figure"""
+"""Module that plots all the previous graphs in one figure"""
 import numpy as np
 import matplotlib.pyplot as plt
 
 
 def all_in_one():
-
+    """Plot all the previous graphs in one figure."""
     y0 = np.arange(0, 11) ** 3
 
     mean = [69, 0]

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 
 
 def change_scale():
+    """Plot exponential decay of carbon-14 on a logarithmic scale."""
     x = np.arange(0, 28651, 5730)
     r = np.log(0.5)
     t = 5730

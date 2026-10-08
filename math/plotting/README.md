@@ -47,27 +47,6 @@ Data visualization is a fundamental skill throughout machine learning and data a
 | Three-dimensional plots | Exploring relationships between multiple variables                        |
 | Data visualization      | Exploratory data analysis, model evaluation, and data storytelling        |
 
-## Resources
-
-**Read or watch:**
-
-* [Plot (graphics)](https://intranet.hbtn.io/rltoken/swUAw_dV4-PhFth6wSzU1w)
-* [Scatter plot](https://intranet.hbtn.io/rltoken/ukujmh-I_E6VTCLeJLiANw)
-* [Line chart](https://intranet.hbtn.io/rltoken/gO3-Klt1z0tJeVU1aJD9qg)
-* [Bar chart](https://intranet.hbtn.io/rltoken/JLN6oUJ6zbzZPW2i4Z_TaQ)
-* [Histogram](https://intranet.hbtn.io/rltoken/FXDyUjw0H15E7AmmTo35LA)
-* [Pyplot tutorial](https://intranet.hbtn.io/rltoken/OFIlhs5hVBKKb94LTPKJTw)
-* [Matplotlib pyplot](https://intranet.hbtn.io/rltoken/rx6ItoEW_I7nK4nCex7lXQ)
-* [Matplotlib plotting functions](https://intranet.hbtn.io/rltoken/Rw2oKb9JYJiMhnbPTUCUhA)
-* [Matplotlib scatter](https://intranet.hbtn.io/rltoken/QmfwDDiu9-quaGgApMT6OA)
-* [Matplotlib bar](https://intranet.hbtn.io/rltoken/rRktEeEVDCiYNmvx4SKcjA)
-* [Matplotlib histogram](https://intranet.hbtn.io/rltoken/PKXgWPcvfmcpiGUKz6bE6Q)
-* [Axis labels and titles](https://intranet.hbtn.io/rltoken/GISbsT3nJW7rEYoQAnSTKg)
-* [Subplots and multiple figures](https://intranet.hbtn.io/rltoken/mBsd852vz8grSP5kvGhqhg)
-* [Matplotlib axes legend](https://intranet.hbtn.io/rltoken/LBldwLJfzUYb_k63fgnsnQ)
-* [Three-dimensional plotting](https://intranet.hbtn.io/rltoken/olLT2_Ce61FD4APHoTqb4Q)
-* [Additional tutorials](https://intranet.hbtn.io/rltoken/ZuVz5fLoA3Aj-mSd9Ks6eQ)
-
 ## Learning Objectives
 
 At the end of this project, you are expected to be able to explain to anyone, **without the help of Google**, the following concepts.
