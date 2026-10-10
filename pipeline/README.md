@@ -21,7 +21,7 @@ Imagine collecting information about thousands of houses. The raw data might con
 
 | Project | What you learn | Status |
 |---------|----------------|--------|
-| [pandas](./pandas) | Creating DataFrames, selecting data, indexing, manipulating columns, and visualizing datasets | In progress |
+| [pandas](./pandas) | Creating DataFrames, selecting data, indexing, manipulating columns, and visualizing datasets | Available |
 
 ## Where you will meet this again
 

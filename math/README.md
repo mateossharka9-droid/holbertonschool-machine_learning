@@ -21,7 +21,8 @@ A house described by its size, rooms and age is a vector of three numbers. A tho
 | Project | What you learn | Status |
 |---------|----------------|--------|
 | [linear_algebra](./linear_algebra) | Vectors, matrices, shapes, and the operations models are built from | Available |
-| probability | Distributions, uncertainty, and reasoning about chance | Coming next |
+| [plotting](./plotting) | Visualizing mathematical functions, data distributions, and relationships using Matplotlib | Available |
+
 
 ## Where you will meet this again
 
