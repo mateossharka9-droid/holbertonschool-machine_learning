@@ -1,4 +1,4 @@
-# !/usr/bin/env python3
+#!/usr/bin/env python3
 """Find the home planets of sentient Star Wars species using SWAPI."""
 
 import requests
