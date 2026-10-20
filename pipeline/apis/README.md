@@ -25,6 +25,40 @@ By completing this project, I aim to understand how to:
 - Transform, filter, count, and sort information from external services.
 - Read command-line arguments using `sys.argv`.
 
+## How the Project Works
+
+The project follows a common data-ingestion pattern: **send an HTTP request, inspect the response, collect the required records, and transform them into an answer**. The processing depends on the API and the task.
+
+```mermaid
+flowchart LR
+    A["Python scripts and functions"] --> B["HTTP GET with requests"]
+    B --> C{"Select API"}
+
+    C --> D["SWAPI: starships, species, planets"]
+    C --> E["GitHub: user profile"]
+    C --> F["SpaceX: launches, rockets, launchpads"]
+
+    D --> G["Follow next-page and resource URLs"]
+    E --> H["Check status codes and rate-limit headers"]
+    F --> I["Resolve IDs, select records, and count"]
+
+    G --> J["Return lists or print results"]
+    H --> J
+    I --> J
+```
+
+### Data Flow by Task
+
+| Task | API data retrieved | Transformation | Result |
+|---|---|---|---|
+| 0 — Passengers | Paginated starship records | Filter by numeric passenger capacity | List of ship names |
+| 1 — Sentience | Paginated species and linked planets | Select sentient species and resolve homeworlds | List of planet names |
+| 2 — User location | GitHub user profile and response headers | Check status, location, and rate limit | Printed location or status message |
+| 3 — First launch | Upcoming launches, rockets, and launchpads | Choose earliest upcoming launch and resolve IDs | Printed launch information |
+| 4 — Rocket frequency | Launches and rocket records | Group by rocket and sort totals | Ranked rocket launch counts |
+
+> GitHub renders the Mermaid diagram directly from this Markdown file; no image asset is required.
+
 ## Technologies
 
 - Python 3
@@ -91,6 +125,28 @@ print(availableShips(10))
 ```
 
 **Concepts:** `requests.get()`, JSON parsing, filtering, pagination.
+
+#### Task 0: Pagination and Filtering Flowchart
+
+```mermaid
+flowchart TD
+    A["Call availableShips(passengerCount)"] --> B["GET first starships page"]
+    B --> C["Parse JSON and read results"]
+    C --> D{"Another ship on this page?"}
+
+    D -- Yes --> E["Read passengers and remove commas"]
+    E --> F{"Numeric capacity meets the minimum?"}
+    F -- Yes --> G["Append ship name to results"]
+    F -- No --> D
+    G --> D
+
+    D -- No --> H{"Is there a next-page URL?"}
+    H -- Yes --> I["GET the next page"]
+    I --> C
+    H -- No --> J["Return matching names or an empty list"]
+```
+
+The function processes **every ship on every page**. It skips nonnumeric passenger values (such as `unknown` or `n/a`) and only appends names when the capacity is at least `passengerCount`. When SWAPI has no more pages, the accumulated list is returned; if nothing matched, that list is `[]`.
 
 ### 1. Home Planets of Sentient Species
 
