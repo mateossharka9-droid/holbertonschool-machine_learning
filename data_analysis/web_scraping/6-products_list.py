@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scrape static product listings using Selenium."""
+"""Scrape static products using Selenium."""
 
 import time
 
@@ -7,10 +7,12 @@ from selenium import webdriver
 
 
 def scrape_products(url):
-    """Extract products from a static category page."""
+    """Return a list of product dictionaries."""
     options = webdriver.ChromeOptions()
-    options.add_argument("--headless=new")
+    options.add_argument("--headless")
     options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--disable-gpu")
     options.add_argument("--window-size=1920,1080")
 
     driver = webdriver.Chrome(options=options)
@@ -21,7 +23,9 @@ def scrape_products(url):
 
         products = []
 
-        items = driver.find_elements("css selector", ".thumbnail")
+        items = driver.find_elements(
+            "css selector", "div.thumbnail"
+        )
 
         for item in items:
             title = item.find_element(
