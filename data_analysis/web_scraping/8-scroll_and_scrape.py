@@ -68,9 +68,9 @@ def scroll_and_scrape(url, scroll_pause=2.0):
                 "css selector", "p.description"
             ).text
 
-            rating = int(item.find_element(
-                "css selector", ".ratings p[data-rating]"
-            ).get_attribute("data-rating"))
+            rating = len(item.find_elements(
+                "css selector", ".ratings span.ws-icon-star"
+            ))
 
             key = (title, price)
 
