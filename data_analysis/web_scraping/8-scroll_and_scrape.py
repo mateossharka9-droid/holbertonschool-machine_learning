@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Scrape infinite-scroll products using Selenium."""
+"""Scrape products from an infinite-scroll page using Selenium."""
 
 import time
 
@@ -7,7 +7,7 @@ from selenium import webdriver
 
 
 def scroll_and_scrape(url, scroll_pause=2.0):
-    """Scroll and extract unique product details."""
+    """Scroll through the page and extract unique products."""
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
     options.add_argument("--no-sandbox")
@@ -68,10 +68,9 @@ def scroll_and_scrape(url, scroll_pause=2.0):
                 "css selector", "p.description"
             ).text
 
-            rating = len(item.find_elements(
-                "css selector",
-                ".ratings p.ws-icon.ws-icon-star"
-            ))
+            rating = int(item.find_element(
+                "css selector", ".ratings p[data-rating]"
+            ).get_attribute("data-rating"))
 
             key = (title, price)
 
