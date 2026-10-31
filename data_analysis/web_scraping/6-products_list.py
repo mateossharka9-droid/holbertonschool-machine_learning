@@ -6,8 +6,8 @@ import time
 from selenium import webdriver
 
 
-def scrape_products_list(url):
-    """Extract product details from a static category page."""
+def scrape_products(url):
+    """Extract products from a static category page."""
     options = webdriver.ChromeOptions()
     options.add_argument("--headless=new")
     options.add_argument("--no-sandbox")
@@ -51,3 +51,6 @@ def scrape_products_list(url):
 
     finally:
         driver.quit()
+
+
+scrape_products_list = scrape_products
